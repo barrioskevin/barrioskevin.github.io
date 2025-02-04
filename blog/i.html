@@ -1,114 +1,226 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <title>Barrios Kevin: Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Kevin Barrios's Website" />
+    <meta name="author" content="@BARRIXXS" />
+    <link rel="shortcut icon" href="../resources/img/dkicon.png" />
+    <link rel="stylesheet" href="../styles/headercomp.css" />
+    <link rel="stylesheet" href="../styles/pagestyle.css" />
+    <link rel="stylesheet" href="../styles/blogi.css" />
+  </head>
 
-<head>
-	<title>Barrios Kevin: Blog</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Kevin Barrios's Website">
-	<meta name="author" content="@BARRIXXS">
-	<link rel="shortcut icon" href="../resources/img/dkicon.png" />
-	<link rel="stylesheet" href="../styles/headercomp.css">
-	<link rel="stylesheet" href="../styles/pagestyle.css">
-	<link rel="stylesheet" href="../styles/blogi.css">
-</head>
+  <body>
+    <div id="page-container">
+      <div id="header-component"></div>
 
-	<body>
-		<div id="page-container">
-		<div id="header-component"></div>
+      <main>
+        <h1>Awful v2 (New Website!)</h1>
+        <small id="description"
+          >Author: Kevin Barrios<br />Posted: 09/08/2024</small
+        >
+        <section id="intro-section">
+          <h2>Introduction</h2>
 
-		<main>
-			<h1>Awful v2 (New Website!)</h1>
-			<small id="description">Author: Kevin Barrios<br>Posted: 09/08/2024</small>
-			<section id="intro-section">
-				<h2>Introduction</h2>
-				
-				<p>Hello! If you are reading this that means you have made it to my new website. I had a previous version of my website
-				   but decided that it needed a new overhaul. In this post I talk about why I made a new version of my site, what's new,
-				   and what to expect in the future. I am really excited to finally have this new version up and running and 
-				   I can't wait to talk about the process.</p>
-			</section>
-			<section id="why-section">
-				<h2>Why I Made The Change</h2>
-				<p>I decided to make my website (v1) in late 2023, at the time I wanted to have a professional page where I can showcase my
-				   projects and previous work experience. My goal was to have my website linked in applications to positions that I would
-				   apply for in hopes that employers would check out the site and get to learn more about my technical skills and experience.</p>
-				<p>The original version was a one page website that had multiple sections such as about, experience, projects, skills, etc. I liked
-				   the style at the time and thought that it had all the necessary information that a future employer might be looking for. However there
-				   was one thing different about the previous version than in this new updated version, my orignal version was a pre-built template.</p>
-				<p>When I first created the website I didn't know much about hosting a website so I looked up ways on how to host a website to get an idea
-				   of how it's done. This is when I found out that you can actually host a website for free using GitHub! Once I figured out how I would 
-				   host my website I then started thinking about how to build it. Because I had orignially wanted a website to showcase myself to future 
-				   employers I opted to find an online template where I can have a webpage already built and then just fill in and add my personal information.</p>
-				<p>While having a templated website wasn't a bad idea, and my website actually looked pretty nice, as time went on I didn't really like the feeling
-				   of not having created the website myself. I don't know if it's just the inner developer in me but I really like the idea of building things on my
-				   own. I also didn't like the fact that I had originally tailored my website for a professional perspective of my life, I felt that I couldn't add
-				   anything to my website without maintaining a professional image so that I can seem like a good candidate for future employers.</p>
-				<p>While this new site still hopes to maintain a good image and will still be shared with future employers, I wanted to make it more personal. I wanted
-				   a new version of my website that was more organized and have my information spread across different pages so that if future employers do come to
-				   visit they can find exactly what they need and nothing more. Most importantly I wanted to create the website myself (NO TEMPLATE).
-				   So, last month I began my revamp.</p>
-			</section>
-			<section id="whatsnew-section">
-				<h2>What's New</h2>
-				<p>Like I mentioned before, I wanted to create this new website myself so I setup a new directory on my laptop and created the standard "index.html" file
-				   for my homepage. I had a vague idea of how I wanted to my website to look but when I was first getting started making the website I was more focused on
-				   project structure and making sure my HTML was managable. In my index file I created a basic head section and setup the body so that I can write my info.
-				   From the start I started marking each part of the home page it's own section and labeling them with id's so I can style them in the future. I used my old
-				   website as a reference when filling out my the home page but I changed to a more personal tone in hopes to relate/connect with readers. Because I wanted
-				   to break my new website into different pages I decided to keep my homepage as a sort of "About Me" page where I talk about who I am and my background.
-				   Currently my homepage focuses on my studies at UNLV and my background from when I was younger since I haven't really gotten much further than that. In the
-				   future I plan on keeping this section updated to include more relevant events in my life.</p>
-				<p>After I setup my homepage I started to think about the overall styling for my website because I wanted to keep a consist style going forward with the new
-				   pages that I would add. I eventually came up with the style you're seeing now but i'm open to changing it in the future as my skills and opinons evolve. Once
-				   I had a style prepared for the website I began adding more pages. I started with the Contact page as it was the most simple. Here I just give out various outlets
-				   so that anyone reading could reach me. I kept the style consistent and this is where I created my header component.</p>
-				<p>Because the style of my website is to remain consistent across different pages I was looking for ways to make it easier to setup each page. I started by first maintaining
-				   a single stylesheet that would be used for the style of each page and link them on every new page. This was a good start as it made it easier to change the look of my website
-				   without having to repeat styles, but I needed something for my header. The header is the top part of the webpage that displays my name and links to the different pages on my
-				   website. When I was building the first couple pages of my site I was copying and pasting the header used in the homepage to each new page. I knew there had to be
-				   a better way and after a little research I found a clean way to import HTML to a page using JavaScript. I created a HTML file in my project directory that contained just my
-				   header, I also created another stylesheet to go along with this file and only focus on styling the header. I then created a JavaScript file that is responsible for filing
-				   in a div labeled "header-component" with all the HTML content of my header file. Now all I needed to do to add my header to a new page is to link the stylesheet and script.
-				   This made adding new sections easier and I started to work on my Projects section.</p>
-				<p>In v1 of my website everything was on one page, I had a section for projects in this page where I gave a brief description of the project and a little screenshot/demo. I liked
-				   this approach but I feel like I was limited with one page and adding to much text would get readers lost. In my new version of my website I wanted to have a project page where
-				   each my project's would be listed and you can click on them to see my post about the project. I plan on going more in depth with my descriptions and talking more about
-				   my experience creating my projects. I made a folder in my project directory called "projects" where I plan to put all my pages related to my projects in. At the time of writing
-				   this I only managed to write an entry for one project but I plan on adding more in the future improving on my explanations and presentation.</p>
-				<p>After having created my homepage, contact page, and project page all that was left was to add in my blog page. I was really excited to add in a blog section to my website
-				   because I've always wanted a place to express my thoughts and ideas. I still don't know if I want to keep the blog technical or write about all sorts of topics, I figure I will
-				   figure out what to write about as I go. The process for making my blog section was similar to making my project section I created a folder called "blog" and added in the
-				   necessary pages. I figured the first post should be me talking about the new updated site but I plan on updating the page with new posts as frequently as I can.</p>
-			</section>
-			<section id="conclusion-section">
-				<h2>Moving Forward</h2>
-				<p>Having created this new website myself I hope to treat it differently then my previous version. I want to keep this website updated and consistently add new blog
-				   and project posts. Updates to the site are also certain to take place and I'm excited to make and talk about any changes that I come up with.</p>
-				<p>I hope that in the future as I keep maintaining this website my technical skills imporve as well as my writing. Writing more frequently will help me improve 
-				   my communication skills, which I've always had trouble with.</p>
-				<p>With the new school semester starting I plan to update the site with new posts as frequently as I can. I plan on sharing my experiences that I have throughout
-				   my semester and any intersting things I learn. I'm aiming to have new blog posts up weekly. Also, if you notice any grammar/spelling mistakes across this site 
-				   bear with me because I am writing this entire site in HTML using vim, so as of right now I haven't implemented proper spell checking.</p>
-				<p>As always I'm open to any suggestions, comments, or remarks about this website (or anything in general). Feel free to contact me with any opinions (especially
-				   if you have any advice on HTML/CSS/JavaScript).</p>
-				<p>Thank you for taking the time to read this post. I hope you come back and visit again to see how my website evolves!</p>
-			</section>
-			<section id="ps-section">
-				<small><em>Oh, If you were ever questioning the title of this post "Awful v2", it's because I started to use the name "Awful" as a display name across the internet. I'm
-				       not really sure why (maybe I will post about it in the future) but I also decided to give that name to the project of my website. You know, all projects have
-				       code names.</em></small>
-			</section>
-						
-		</main>
+          <p>
+            Hello! If you are reading this that means you have made it to my new
+            website. I had a previous version of my website but decided that it
+            needed a new overhaul. In this post I talk about why I made a new
+            version of my site, what's new, and what to expect in the future. I
+            am really excited to finally have this new version up and running
+            and I can't wait to talk about the process.
+          </p>
+        </section>
+        <section id="why-section">
+          <h2>Why I Made The Change</h2>
+          <p>
+            I decided to make my website (v1) in late 2023, at the time I wanted
+            to have a professional page where I can showcase my projects and
+            previous work experience. My goal was to have my website linked in
+            applications to positions that I would apply for in hopes that
+            employers would check out the site and get to learn more about my
+            technical skills and experience.
+          </p>
+          <p>
+            The original version was a one page website that had multiple
+            sections such as about, experience, projects, skills, etc. I liked
+            the style at the time and thought that it had all the necessary
+            information that a future employer might be looking for. However
+            there was one thing different about the previous version than in
+            this new updated version, my orignal version was a pre-built
+            template.
+          </p>
+          <p>
+            When I first created the website I didn't know much about hosting a
+            website so I looked up ways on how to host a website to get an idea
+            of how it's done. This is when I found out that you can actually
+            host a website for free using GitHub! Once I figured out how I would
+            host my website I then started thinking about how to build it.
+            Because I had orignially wanted a website to showcase myself to
+            future employers I opted to find an online template where I can have
+            a webpage already built and then just fill in and add my personal
+            information.
+          </p>
+          <p>
+            While having a templated website wasn't a bad idea, and my website
+            actually looked pretty nice, as time went on I didn't really like
+            the feeling of not having created the website myself. I don't know
+            if it's just the inner developer in me but I really like the idea of
+            building things on my own. I also didn't like the fact that I had
+            originally tailored my website for a professional perspective of my
+            life, I felt that I couldn't add anything to my website without
+            maintaining a professional image so that I can seem like a good
+            candidate for future employers.
+          </p>
+          <p>
+            While this new site still hopes to maintain a good image and will
+            still be shared with future employers, I wanted to make it more
+            personal. I wanted a new version of my website that was more
+            organized and have my information spread across different pages so
+            that if future employers do come to visit they can find exactly what
+            they need and nothing more. Most importantly I wanted to create the
+            website myself (NO TEMPLATE). So, last month I began my revamp.
+          </p>
+        </section>
+        <section id="whatsnew-section">
+          <h2>What's New</h2>
+          <p>
+            Like I mentioned before, I wanted to create this new website myself
+            so I setup a new directory on my laptop and created the standard
+            "index.html" file for my homepage. I had a vague idea of how I
+            wanted to my website to look but when I was first getting started
+            making the website I was more focused on project structure and
+            making sure my HTML was managable. In my index file I created a
+            basic head section and setup the body so that I can write my info.
+            From the start I started marking each part of the home page it's own
+            section and labeling them with id's so I can style them in the
+            future. I used my old website as a reference when filling out my the
+            home page but I changed to a more personal tone in hopes to
+            relate/connect with readers. Because I wanted to break my new
+            website into different pages I decided to keep my homepage as a sort
+            of "About Me" page where I talk about who I am and my background.
+            Currently my homepage focuses on my studies at UNLV and my
+            background from when I was younger since I haven't really gotten
+            much further than that. In the future I plan on keeping this section
+            updated to include more relevant events in my life.
+          </p>
+          <p>
+            After I setup my homepage I started to think about the overall
+            styling for my website because I wanted to keep a consist style
+            going forward with the new pages that I would add. I eventually came
+            up with the style you're seeing now but i'm open to changing it in
+            the future as my skills and opinons evolve. Once I had a style
+            prepared for the website I began adding more pages. I started with
+            the Contact page as it was the most simple. Here I just give out
+            various outlets so that anyone reading could reach me. I kept the
+            style consistent and this is where I created my header component.
+          </p>
+          <p>
+            Because the style of my website is to remain consistent across
+            different pages I was looking for ways to make it easier to setup
+            each page. I started by first maintaining a single stylesheet that
+            would be used for the style of each page and link them on every new
+            page. This was a good start as it made it easier to change the look
+            of my website without having to repeat styles, but I needed
+            something for my header. The header is the top part of the webpage
+            that displays my name and links to the different pages on my
+            website. When I was building the first couple pages of my site I was
+            copying and pasting the header used in the homepage to each new
+            page. I knew there had to be a better way and after a little
+            research I found a clean way to import HTML to a page using
+            JavaScript. I created a HTML file in my project directory that
+            contained just my header, I also created another stylesheet to go
+            along with this file and only focus on styling the header. I then
+            created a JavaScript file that is responsible for filing in a div
+            labeled "header-component" with all the HTML content of my header
+            file. Now all I needed to do to add my header to a new page is to
+            link the stylesheet and script. This made adding new sections easier
+            and I started to work on my Projects section.
+          </p>
+          <p>
+            In v1 of my website everything was on one page, I had a section for
+            projects in this page where I gave a brief description of the
+            project and a little screenshot/demo. I liked this approach but I
+            feel like I was limited with one page and adding to much text would
+            get readers lost. In my new version of my website I wanted to have a
+            project page where each my project's would be listed and you can
+            click on them to see my post about the project. I plan on going more
+            in depth with my descriptions and talking more about my experience
+            creating my projects. I made a folder in my project directory called
+            "projects" where I plan to put all my pages related to my projects
+            in. At the time of writing this I only managed to write an entry for
+            one project but I plan on adding more in the future improving on my
+            explanations and presentation.
+          </p>
+          <p>
+            After having created my homepage, contact page, and project page all
+            that was left was to add in my blog page. I was really excited to
+            add in a blog section to my website because I've always wanted a
+            place to express my thoughts and ideas. I still don't know if I want
+            to keep the blog technical or write about all sorts of topics, I
+            figure I will figure out what to write about as I go. The process
+            for making my blog section was similar to making my project section
+            I created a folder called "blog" and added in the necessary pages. I
+            figured the first post should be me talking about the new updated
+            site but I plan on updating the page with new posts as frequently as
+            I can.
+          </p>
+        </section>
+        <section id="conclusion-section">
+          <h2>Moving Forward</h2>
+          <p>
+            Having created this new website myself I hope to treat it
+            differently then my previous version. I want to keep this website
+            updated and consistently add new blog and project posts. Updates to
+            the site are also certain to take place and I'm excited to make and
+            talk about any changes that I come up with.
+          </p>
+          <p>
+            I hope that in the future as I keep maintaining this website my
+            technical skills imporve as well as my writing. Writing more
+            frequently will help me improve my communication skills, which I've
+            always had trouble with.
+          </p>
+          <p>
+            With the new school semester starting I plan to update the site with
+            new posts as frequently as I can. I plan on sharing my experiences
+            that I have throughout my semester and any intersting things I
+            learn. I'm aiming to have new blog posts up weekly. Also, if you
+            notice any grammar/spelling mistakes across this site bear with me
+            because I am writing this entire site in HTML using vim, so as of
+            right now I haven't implemented proper spell checking.
+          </p>
+          <p>
+            As always I'm open to any suggestions, comments, or remarks about
+            this website (or anything in general). Feel free to contact me with
+            any opinions (especially if you have any advice on
+            HTML/CSS/JavaScript).
+          </p>
+          <p>
+            Thank you for taking the time to read this post. I hope you come
+            back and visit again to see how my website evolves!
+          </p>
+        </section>
+        <section id="ps-section">
+          <small
+            ><em
+              >Oh, If you were ever questioning the title of this post "Awful
+              v2", it's because I started to use the name "Awful" as a display
+              name across the internet. I'm not really sure why (maybe I will
+              post about it in the future) but I also decided to give that name
+              to the project of my website. You know, all projects have code
+              names.</em
+            ></small
+          >
+        </section>
+      </main>
 
-		<footer>
-			<p><strong>Thank You For Your Time.</strong></p>
-		</footer>
-
-		</div>
-		<script src="../scripts/loadheadercomp.js"></script>
-	</body>
-
-
+      <footer>
+        <p><strong>Thank You For Your Time.</strong></p>
+      </footer>
+    </div>
+    <script src="../scripts/loadheadercomp.js"></script>
+  </body>
 </html>

@@ -1,37 +1,37 @@
 #hello-world-div1 {
-	border-style: solid;
-	border-width: 0px;
-	border-color: black;
-	overflow: hidden;
-	display: flex;
+  border-style: solid;
+  border-width: 0px;
+  border-color: black;
+  overflow: hidden;
+  display: flex;
 }
 #hello-world-div2 {
-	flex: 1;
+  flex: 1;
 }
 
 #hello-world-div1 img {
-	margin: 20px auto;
-	height: 300px;
-	width: auto;
-	object-fit: cover;
+  margin: 20px auto;
+  height: 300px;
+  width: auto;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
-	#hello-world-div1 img {
-		order: 1;
-		float: none; /* Remove the float so the image stacks above/below the text */
-		/*display: block;*/
-		margin: 0 auto 20px auto; /* Center the image */
-		height: 300px; /* Let the image adjust its height */
-		width: auto; /* Ensure the image fills the container */
-	}
-	#hello-world-div1 {
-		flex-direction: column; 
-	}
-	#hello-world-div2 p:first-of-type + img {
-		order: 2;
-	}
-	#hello-world-div2 {
-		margin-right: 0;
-	}
+  #hello-world-div1 img {
+    order: 1;
+    float: none; /* Remove the float so the image stacks above/below the text */
+    /*display: block;*/
+    margin: 0 auto 20px auto; /* Center the image */
+    height: 300px; /* Let the image adjust its height */
+    width: auto; /* Ensure the image fills the container */
+  }
+  #hello-world-div1 {
+    flex-direction: column;
+  }
+  #hello-world-div2 p:first-of-type + img {
+    order: 2;
+  }
+  #hello-world-div2 {
+    margin-right: 0;
+  }
 }

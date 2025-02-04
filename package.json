@@ -1,0 +1,20 @@
+{
+  "name": "imawful.github.io",
+  "version": "1.0.0",
+  "description": "trying github pages",
+  "main": "index.js",
+  "scripts": {
+    "format": "npx prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "tailwindcss": "^4.0.3"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.3"
+  }
+}

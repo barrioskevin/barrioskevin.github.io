@@ -1,77 +1,83 @@
 h1 {
-	font-size: 50px;
-	text-align: center;
+  font-size: 50px;
+  text-align: center;
 }
 
-
 .image-holder {
-	display: flex;
-	gap: 10px;
-	justify-content: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
 .image-holder img {
-	display: block;
+  display: block;
 }
 
 #bjgui-image {
-	width: 400px;
-	height: 350px;
+  width: 400px;
+  height: 350px;
 }
 #bjheader1-image {
-	width: 200px;
-	height: 400px;
+  width: 200px;
+  height: 400px;
 }
 
-#master-deck-image, #create-shoe-image {
-	width: 300px;
-	height: auto;
+#master-deck-image,
+#create-shoe-image {
+  width: 300px;
+  height: auto;
 }
 
 #bjsecondapproach-image {
-	height: 400px;
-	width: auto;
+  height: 400px;
+  width: auto;
 }
 #bjsecondmain-image {
-	height: 300px;
-	width: auto;
+  height: 300px;
+  width: auto;
 }
 #bjobject-image {
-	height: 500px;
-	width: auto;
+  height: 500px;
+  width: auto;
 }
 #bj3playbj-image {
-	width: auto;
-	height: 150px;
+  width: auto;
+  height: 150px;
 }
 #bj3play-image {
-	height: 500px;
-	width: auto;
+  height: 500px;
+  width: auto;
 }
 #bj3playstart-image {
-	width: 500px;
-	height: auto;
+  width: 500px;
+  height: auto;
 }
 @media (max-width: 768px) {
-	.image-holder {
-		flex-direction: column;	
-		height: auto;
-		align-items: center;
-	}
-	#bjgui-image {
-		width: 100%;
-		height: auto;
-	}
-	#bjheader1-image {
-		width: 60%;
-		height: auto;
-	}
- 	#bjobject-image, #bj3playbj-image, #bj3playstart-image {
-		width: 95%;
-		height: auto;
-	}
-	#master-deck-image, #bj3play-image, #bjsecondmain-image,  #create-shoe-image, #bjsecondapproach-image {
-		width: 50%;
-		height: auto;
-	}
+  .image-holder {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  #bjgui-image {
+    width: 100%;
+    height: auto;
+  }
+  #bjheader1-image {
+    width: 60%;
+    height: auto;
+  }
+  #bjobject-image,
+  #bj3playbj-image,
+  #bj3playstart-image {
+    width: 95%;
+    height: auto;
+  }
+  #master-deck-image,
+  #bj3play-image,
+  #bjsecondmain-image,
+  #create-shoe-image,
+  #bjsecondapproach-image {
+    width: 50%;
+    height: auto;
+  }
 }

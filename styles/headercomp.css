@@ -1,85 +1,84 @@
 #title-header {
-	background-color: black;
-	padding: 20px;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 #home-title {
-	margin: 0 0 20px 0;
-	text-align: center;
-	color: white;
-	font-size: 5rem;
+  margin: 0 0 20px 0;
+  text-align: center;
+  color: white;
+  font-size: 5rem;
 }
 
 #nav-container {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
 }
 
 .nav-section {
-	color: white;
-	flex: 1;
-	margin: 10px;
+  color: white;
+  flex: 1;
+  margin: 10px;
 }
 
 .nav-section h2 {
-	font-size: 1.5rem;
-	margin-bottom: 10px;
-	text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .nav-list {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-list li {
-	margin: 5px 0;
+  margin: 5px 0;
 }
 
 .nav-list li a {
-	color: white;
-	text-decoration: none;
-	font-size: 1.1rem;
-	padding: 5px 10px;
-	border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
-.nav-list li a:hover
-{
-	background-color: #f7f2e7;
-	color: black;
+.nav-list li a:hover {
+  background-color: #f7f2e7;
+  color: black;
 }
 
 .nav-list li a:focus,
 .nav-list li a:active {
-	background-color: transparent;
-	color: white;
-	outline: none;
+  background-color: transparent;
+  color: white;
+  outline: none;
 }
 .nav-list li a {
-	outline: none;
+  outline: none;
 }
 
 @media (max-width: 768px) {
-	#nav-container {
-		flex-direction: column;
-		align-items: center;
-	}
-	.nav-section h2 {
-		text-align: center;
-	}
-	.nav-list {
-		align-items: center;
-	}
+  #nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-section h2 {
+    text-align: center;
+  }
+  .nav-list {
+    align-items: center;
+  }
 }
