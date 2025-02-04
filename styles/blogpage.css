@@ -1,0 +1,16 @@
+#blogpost-list {
+	/*list-style-type: circle;*/ 
+	/*padding-left: 0;*/
+}
+
+.blogpost-link {
+	text-decoration: none;
+}
+
+.blogpost-link:hover {
+	text-decoration: underline;
+}
+
+.blogpost-date {
+	text-decoration: none;
+}

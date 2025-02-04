@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Barrios Kevin: Projects</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Kevin Barrios's Website">
+	<meta name="author" content="@BARRIXXS">
+	<link rel="shortcut icon" href="../resources/img/dkicon.png" />
+	<link rel="stylesheet" href="../styles/pagestyle.css">
+	<link rel="stylesheet" href="../styles/headercomp.css">
+	<link rel="stylesheet" href="../styles/proji.css">
+</head>
+
+
+<body>
+	<div id="page-container">
+
+		<div id="header-component"></div>
+
+		<main>
+			<h1>A Functional Approach To BlackJack.</h1>
+			<section id="intro-section">
+				<h2>Introduction</h2>
+				<p>Blackjack is a classic casino game in which players play against the dealer in an attempt to make the better hand, where the best hand one can make is 21. There are various constraints to the game that make it exciting. At the start of a hand each player is dealt two cards face up and the dealer is given two cards with only one card being face up visible to all players. Each player then takes turns to play their hand where players can choose to hit (draw a card) or stand (finalize hand). Each card in the deck represents an integer value and a hand's total value is the combined total of each card. If a hand ever goes over 21 it is considered a bust and is an automatic loss. After each player has finished playing their hand the dealer then reveals the hidden card and continues to play their hand if a player ends up with a higher total then the dealer then their bet recieves a payout.</p>
+
+				<p>There are strategic elements to Blackjack that make it a really interesting and, if played correctly, a fair game. When I got the chance to play this game I really enjoyed the gameplay and the control that a player has to determine their outcome. One day when I was playing this game I got the idea of writing a Blackjack program. The program would simulate the different pieces of Blackjack and allows users to bet and play hands. I figured the program seemed simple enough and when I arrived home that night I started working on my first implementation.</p>
+			</section>
+			<section id="prev-section">
+				<h2>Previous Attempts</h2>
+				<p>I decided to model my program similar to the Blackjack game of the casino I played at. This way I would have familiarity when writing the more detailed aspects of the program. My first attempt at writing this game was using C combined with Simple Direct Media Layer (SDL2) to render visuals. While this approach got me a working prototype there was much to improve.</p>
+				<div class="image-holder">
+					<img id="bjgui-image" src="../resources/img/bjc.jpg">
+				</div>
+
+				<p>I was modeling the program with the casino game in mind and that allowed me to come up with a concise list of structs needed however this first implementation was a simple game that didn't leave room for much improvement. With this version I wasn't able to play multiple hands including splitting hands which is an important part of the game. I also was having trouble with using SDL properly because when testing the program there would would be cases where the program would crash (skill issue ig). I decided that having to manage both the gui and the logic of the game would be too difficult and wanted to write something that focused more on the blackjack game itself.</p>
+				<p>I opted to rewrite the game, this time just using standard output and input for user i/o instead of working with a gui. The idea was that if I can write the game as a standalone program it would be much easier to add a UI later on. In my rewrite of the game I stuck with C and this time I would try to utilize pointers more efficiently. This approach used linked lists to manage the players in the game and also for manging each player's hands. Since I was working only with standard output I had to come up with a creative way to output the game's data to the screen. I used a character buffer that would be held in the game struct and as the game entered different states I would write data to the buffer.Using the game state I was easily able to write the correct contents to the buffer and easily prompt user for input. The second approach resulted in a more sophisticated game that allowed for many more gameplay options that the typical blackjack game in a casino would offer.</p>
+				
+				<div class="image-holder">
+					<img id="bjsecondapproach-image" src="../resources/img/bjsecondrewrite.png">
+					<img id="bjsecondmain-image" src="../resources/img/bj2main.png">
+				</div>
+				<p>I was happy with this implementation. I spent a lot of time just playing this program for fun and testing out different strategies of the game. I was proud that I was able to accomplish this in C, I even ran the program in valgrind to make sure that I wrote everything properly and sure enough there was no leaks! I considered this a finished project and left it that, only coming back to add simple features such as a side bet. It wasn't until I got intriguied about the idea of functional programming when I decided to come back to programming a blackjack game.</p>
+				<p>I heard about functional programming about a year after the second rewrite of the game. I really liked the idea of simple functions that don't have side effects. I thought this would make handling the state of the game and all the players data simple. When I first attempted functional programming I was working on a video game, much different to the game of blackjack. I found myself stuck trying to write the different parts to the video game because I had so much to keep track of and all my data had to be immuatable. I was able to write some parts of the video game but in the end I didn't go the functional route and just wrote my game how I could. Still, I found the pieces I did rewrite in a functional way very elegant and managable. The main challenge for me was the immutable data structures, I remember thinking how can anyone code anything like this? But I was naive, it was possible I just had to change the way I thought about my code. I figured the best way to try functional programming would be to rewrite my blackjack program again but this time using a functional language. This led to my third rewrite of the game where I would write blackjack using Scala.</p>
+			</section>
+			
+			<section id="approach-section">
+				<h2>A New Approach</h2>
+				<p>I chose Scala as my functional language to write Blackjack. I already had well enough Java experience to understand
+				   the basics of writing programs for the JVM. I installed the Scala build tool on my machine and I was able to start
+				   writing and running Scala code.</p>
+				<p>The first thing I did was setup my structures that I would need for writing the logic of the game. I started with
+				   creating an object for the Cards. In this Cards object I defined enums for the suits and values of the cards and 
+				   made a list of a standard deck of cards that I can reference in my game object. I planned on setting it up similar 
+				   to my last program where I would have one master deck that would be used to create the game's deck easily.</p>
+				<p>The next object I created was the game object called Blackjack. This object actually ended up defining everything
+				   else needed for the game.</p>
+				<div class="image-holder">
+					<img id="bjobject-image" src="../resources/img/bjobject.png">
+				</div>
+				<p>As you can see I had some default values defined so that the game would default to standard double deck with a
+				   minimum bet of $5 and maximum bet of $300. The deck and betting information is held in the class Game Info. 
+				   The game state class holds the state of the game and the data the gets used throughout the game like list of 
+				   players and the dealers hand. The game state class also holds the game info since this game state class is what
+				   we are going to be passing around in each function to recieve an updated game state.</p>
+				<p>That is pretty much my setup for handling the classes needed for the game, the rest of the Blackjack object holds
+				   functions and methods that define the game logic.
+			</section>
+			<section id="logic-section">
+				<h2>Game Logic</h2>
+				<p>To start off talking about the game logic I'm going to show you two functions. The first function is called
+				   play_blackjack() which is a void function that takes no arguments and will be called from main. The second function
+				   is called play(gs) which is a recursive function that takes in a game state and will keep calling play on updated 
+				   game states until the game state reaches End.</p>
+				<div class="image-holder">
+					<img id="bj3playbj-image" src="../resources/img/bj3playbj.png">
+					<img id="bj3play-image" src="../resources/img/bj3play.png">
+				</div>
+				<p>I personally think the play_blackjack function looks really clean. The other play function (which I will be referring
+				   to just as play) also looks pretty clean but I hate the fact that I had to write a for loop to clear the screen. I 
+				   kept the same approach of using a buffer to output the game data onto the screen but I didn't really use a buffer I
+				   just had a function that will generate the output of the game based on the current state. This was actually really
+				   convinient and I saw it as one of the benefits for writing this in a functional way. You can imagine that for any
+				   legal game state, passing it to this function would show the output. The play function is recursive as annotaed by 
+				   @tailrec, which Scala uses to optiize the recursion, and will keep calling itself on updated game states so long 
+				   as we dont hit an End state in which case it does nothing and the function will return. As you can see I define 
+				   helper functions for each state like play_state, this allowed me to not have to deal with implementing all the logic
+				   in one place.</p>
+
+				<h3>play_start(gs)</h3>
+				<p>Let's start with the simplest function, play_start. This function just handles reading a simple "enter to continue"
+				   so that the player can start the game.</p>
+				<div class="image-holder">
+					<img id="bj3playstart-output-image" src="../resources/img/bjplaystartoutput.png">
+					<img id="bj3playstart-image" src="../resources/img/bj3playstart.png">
+				</div>
+				<p>While not containing much code, this function shows how the rest of the play_state functions operate. They take in
+				   a current game state and return a new one. In this case we just advance the state to Select Hands and leave the rest
+				   of the info the same.</p>
+				<h3>play_selecthands(gs)</h3>
+				<p>The next function is play_selecthands. This function is responsible for making sure that each player in our game selects
+			           a number of hands they want to play and creates the lists.</p>
+				<div class="image-holder">
+					<img id="bj3playselect-output-image" src="../resources/img/bjplayselectoutput.png">
+					<img id="bj3playselect-image" src="../resources/img/bjplayselect.png">
+				</div>
+				<p>I start the play_selecthands function off my calling a function called findcurrplayer. Findcurrplayer is an essential
+				   function that I use throughout my program. It takes in the current game state as an argument and then based on the state
+				   it will track down the current player who needs to make a move (provide input) and returns an optional value of either the
+				   current player, or None signaling that we can advance to the next state.</p>
+				<p>I use a try catch block for the input because as I was testing the program for some reason when I would input a number my
+				   program wouldn't read it as an integer value and the crash my program with a number format exception, putting it in a try
+				   catch block allows the program to keep running and try again for input.</p>
+				<p>You can already start to see some of the functional elements here, I'm using strictly "val" type variables which means that
+				   once these values are assigned they cannot be changed. Take a look at how I'm updating the player with new hands and 
+				   the game state's list of players, I'm passing in the current data to a function which will output me an updated version based
+				   on the argument's values. This is a reocurring theme of functional programming, where you call functions with certain inputs and 
+				   always expect the same output. When all players have selected their hands the state advances to Place Bets.</p>
+
+				<h3>play_placebets(gs)</h3>
+				<p>Play_placebets is structured similarily to play_selecthands except here we call a more complex function to update our player 
+				   (addtobet). Also once all players have placed bets we make sure to only take in valid players to the next state. 
+				   That is, players with at least one hand with a bet.</p>
+				<div class="image-holder">
+					<img id="bj3playbet-output-image" src="../resources/img/bj3placebetoutput.png">
+					<img id="bj3playbet-image" src="../resources/img/bj3placebet.png">
+				</div>
+				<p>Once play_placebets finishes, all players have been processed and the game can continue think of this as when you're at the
+				   blackjack table and all the players have placed their chips representing their bet. After all player have bet we move on to
+				   the Initial Deal.</p>
+
+				<h3>play_initialdeal(gs)</h3>
+				<p>The play_initialdeal function is probably one of my favorite functions that I wrote for this game. I wanted to simulate the dealing
+				   exactly like how they do it in the casino. The dealer first deals each player one card from left to right and deals themselves a
+				   face down card. Then, each player gets a second card and the dealer is given their second card last and it is revealed face up. If you
+				   remember the game state keeps track of the deck with a list that is held inside game info. This deck is immutable meaning that I cannot
+				   remove and append as easily as you could in a mutable structure. This rose up some challenges as I came up with how to deal out the cards.
+				   If I couldn't mutate the deck then I had to some how know which cards go where based on the dealing order and assign them to each hand
+				   accordignly.</p>
+				<div class="image-holder">
+					<img id="bj3playinitdeal-image" src="../resources/img/bj3playinitdeal.png">
+				</div>
+				<p>I first started off by collecting every single hand in the game by flatting every player hand into one list and appending the dealers hand.
+				   I then calculate the index of each card that every hand would be given based on the dealing rules (one card left to right and 
+				   then the second) and mapped the new hand to every hand. I then go back and unflatten the list of every hand and give each hand back to
+				   each player. I then find the dealers new hand and update each player's hand to the structure holding all the players and check to see if
+				   any of them got blackjack and assign the blackjack payout accordingly. The deck index is then updated and all the new information gets
+				   passed to a new state where we advance to check to see if the dealer has blackjack.</p>
+				<p>I say that this is one of my favorite functions because I really had to think for a second on how I would implement the dealing logic
+				   without using mutuable data structures. I was proud when I came up with a solution and I learned a lot of handy methods such as flatten,
+				   zipwithindex, and map.</p>
+
+				<h3>play_checkdealer(gs)</h3>
+				<p>Play_checkdealer is a simple function where I check to see if the dealer was dealt a blackjack and if so skip the players turn and jump
+				   to playing the dealer.</p>
+				<div class="image-holder">
+					<img id="bj3checkdealer-image" src="../resources/img/bj3checkdealer.png">
+				</div>
+				
+			</section>
+			<section id="usage-section">
+				<h2>Usage</h2>
+			</section>
+			<section id="conclusion-section">
+				<h2>Conclusion</h2>
+			</section>
+		</main>
+
+
+
+
+
+		<footer>
+			<p><strong>Thank You For Your Time.</strong></p>
+		</footer>
+
+
+	</div>
+	<script src="../scripts/loadheadercomp.js"></script>
+</body>
+
+
+
+
+</html>
