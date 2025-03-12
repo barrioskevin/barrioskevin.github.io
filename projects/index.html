@@ -9,20 +9,18 @@
     <link rel="shortcut icon" href="../resources/img/dkicon.png" />
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="../styles/headercomp.css" />
-    <link rel="stylesheet" href="../styles/pagestyle.css" />
-    <link rel="stylesheet" href="../styles/projectpage.css" />
+    <link href="styles/output.css" rel="stylesheet"  />
   </head>
 
-  <body>
-    <div id="page-container">
+ 
+  <body class="bg-[#f7f2e7] font-mono text-base text-slate-950">
+    <div class="m-[2px] border-black border-[1px] bg-neutral-100 md:m-[47px] md:border-[2px]">
       <div id="header-component"></div>
 
       <main>
-        <section id="project">
-          <h2>Projects</h2>
-
-          <p>
+        <section>
+          <h2 class="mt-2 text-xl font-bold text-center underline">Projects</h2>
+          <p class="p-2 indent-5 text-base">
             Below you will find a selection of projects I've worked on
             showcasing my skills and interests. I aim to provide useful
             background and important information for each project. Pages here
@@ -30,75 +28,77 @@
             throughout the future. I apprectiate you taking the time to visit
             this page.
           </p>
-          <ul id="project-list">
-            <li>
+
+          <div class="p-2 grid grid-flow-col grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex flex-col items-center text-center">
+              <strong><a class="text-3xl text-indigo-600 underline" href="https://github.com/imawful/RebelHub">Rebel Hub</a></strong>
               <div>
-                <strong
-                  ><a href="https://github.com/imawful/RebelHub"
-                    >Rebel Hub</a
-                  ></strong
-                >
-                <div>
-                  <p>Language: JavaScript, Python</p>
-                  <p>Technologies: React, Next.js, Django</p>
-                </div>
-                <p>
-                  A group project where we built a MVP (minimum viable product) of a social media application dedicated to UNLV. This project went on to be entered in our senior design competition. My team was made up of 6 students (including myself) where we competed against 10 other teams in the department of Computer Science. We went on to win first place for RebelHub! It was a lot of fun getting to experience colloborative development first hand for such a successful project. 
-                </p>
+                <p><strong>Language</strong>: JavaScript, Python</p>
+                <p><strong>Technologies</strong>: React, Next.js, Django</p>
+                <p><strong>Description</strong>:</p>
               </div>
-            </li>
-            <li>
+              <p>
+                A group project where we built a MVP (minimum viable product) of a social media application dedicated to UNLV. This project went on to be entered in our senior design competition. My team was made up of 6 students (including myself) where we competed against 10 other teams in the department of Computer Science. We went on to win first place for RebelHub! It was a lot of fun getting to experience colloborative development first hand for such a successful project. 
+              </p>
+              <img class="w-auto h-[300px] m-1" src="../resources/img/rebelhub-hub.png"/>
+            </div>
+            <div class="flex flex-col items-center text-center">
+              <strong
+                ><a class="text-3xl text-indigo-600 underline" href="https://github.com/imawful/functional-blackjack"
+                  >Functional Blackjack</a
+                ></strong
+              >
               <div>
-                <strong
-                  ><a href="https://github.com/imawful/functional-blackjack"
-                    >Functional Blackjack</a
-                  ></strong
-                >
-                <div>
-                  <p>Language: Scala</p>
-                </div>
-                <p>
-                  An attempt to write a standard double deck blackjack game
-                  utilizing immutable data structures.
-                </p>
+                <p><strong>Language</strong>: Scala</p>
+                <p><strong>Technologies</strong>: SBT</p>
+                <p><strong>Description</strong>:</p>
               </div>
-            </li>
-            
-            <li>
+              <p>
+                I wrote this program when I started to learn about functional programming. I really enjoyed learning about
+                a different paradigm in programming because it introduced a whole new way of coming up with solutions to problems. I liked
+                the principles of functional programming and decided to try my best to follow them as I coded a game of blackjack.
+                The program lets you play multiple hands, place bets, double bets, split hands!, and even allows multiple players. 
+                I tried to follow closely the rules you would find in a typical 3:2 double deck game.
+              </p>
+              <div class="flex flex-row">
+                <img class="w-auto h-[300px] m-1" src="../resources/img/bj-project.png"/>
+                <img class="w-auto h-[300px] m-1" src="../resources/img/bj-choices.png"/>
+              </div>
+            </div>
+            <div class="flex flex-col items-center text-center">
+              <strong
+                ><a class="text-3xl text-indigo-600 underline" href="https://github.com/imawful/GraphCPP"
+                  >Graph C++</a
+                ></strong
+              >
               <div>
-                <strong
-                  ><a href="https://github.com/imawful/GraphCPP"
-                    >Graph C++</a
-                  ></strong
-                >
-                <div>
-                  <p>Language: C++</p>
-                </div>
-                <p>
-                  An attempt to represent graphs in cpp in order to run various
-                  algorithms and traversals. I made this project while I was taking a course in Analysis of Algorithms. I used this project
-                  to be able to implment various graph algorithms like Dijkstra's algorithm, Johnshon algorithm, Bellman Ford algorithm, and more!
-                </p>
+                <p><strong>Language</strong>: C++</p>
+                <p><strong>Description</strong>:</p>
               </div>
-            </li>
-<li>
+              <p>
+                An attempt to represent graphs in cpp in order to run various
+                algorithms and traversals. I made this project while I was taking a course in Analysis of Algorithms. I used this project
+                to be able to implment various graph algorithms like Dijkstra's algorithm, Johnshon algorithm, Bellman Ford algorithm, and more!
+              </p>
+            </div>
+            <div class="flex flex-col items-center text-center">
+              <strong
+                ><a class="text-3xl text-indigo-600 underline" href="https://github.com/imawful/snake-sdl2"
+                  >Snake Game</a
+                ></strong
+              >
               <div>
-                <strong
-                  ><a href="https://github.com/imawful/snake-sdl2"
-                    >Snake Game</a
-                  ></strong
-                >
-                <div>
-                  <p>Language: C</p>
-                </div>
-                <p>
-                  A simple snake game written in C using simple direct media
-                  layer 2.0. This was one the first iterations I did writing the game of snake. I beleive
-                  this is a classic game that almost all developers make at some point and this is my take on it.
-                </p>
+                <p><strong>Language</strong>: C</p>
+                <p><strong>Technologies</strong>: SDL2</p>
+                <p><strong>Description</strong>:</p>
               </div>
-            </li>
-          </ul>
+              <p>
+                A simple snake game written in C using simple direct media
+                layer 2.0. This was one the first iterations I did writing the game of snake. I beleive
+                this is a classic game that almost all developers make at some point and this is my take on it.
+              </p>
+            </div>
+          </div>
         </section>
       </main>
 
