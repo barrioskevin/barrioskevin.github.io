@@ -521,6 +521,9 @@
   .visible {
     visibility: visible;
   }
+  .fixed {
+    position: fixed;
+  }
   .m-1 {
     margin: calc(var(--spacing) * 1);
   }
