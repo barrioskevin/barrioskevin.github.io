@@ -1,3 +1,3 @@
-# imawful.github.io
+# barrioskevin.github.io
 
-trying github pages
+A portfolio/personal site utilizing github pages.
